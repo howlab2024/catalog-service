@@ -5,7 +5,7 @@ metadata:
   labels:
     app: catalog-service
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: catalog-service
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: catalog-service
-          image: catalog-service
+          image: ghcr.io/howlab2024/catalog-service:latest
           imagePullPolicy: IfNotPresent
           lifecycle:
             preStop:
